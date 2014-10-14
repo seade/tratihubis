@@ -678,7 +678,7 @@ def migrateTickets(hub, repo, defaultToken, ticketsCsvPath,
                     if not pretend:
                         _issue = _repo.get_issue(issue.number)                        
                         assert _issue is not None
-                        commentBody = tranlator.translate(commentBody)
+                        commentBody = translator.translate(commentBody)
                         _issue.create_comment(commentBody)
             if ticketMap['status'] == 'closed':
                 _log.info(u'  close issue')
